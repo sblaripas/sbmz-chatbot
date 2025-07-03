@@ -1,0 +1,26 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - ask_balance
+  - ask_interest_rate
+  - open_account
+  - faq
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you with your banking needs today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+  utter_ask_balance:
+    - text: "You can check your balance by logging into your online banking portal or via our mobile app."
+  utter_ask_interest_rate:
+    - text: "Our savings account interest rate is currently 3.5% per annum."
+  utter_open_account:
+    - text: "To open a new account, please visit our nearest branch or apply online on our website."
+  utter_faq:
+    - text: "Could you please specify your banking query?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

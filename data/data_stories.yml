@@ -1,0 +1,13 @@
+version: "3.1"
+stories:
+- story: greet and ask balance
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_balance
+    - action: utter_ask_balance
+
+- story: interest rate inquiry
+  steps:
+    - intent: ask_interest_rate
+    - action: utter_ask_interest_rate

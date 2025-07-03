@@ -1,0 +1,31 @@
+aversion: "3.1"
+rules:
+- rule: Greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Ask balance
+  steps:
+  - intent: ask_balance
+  - action: utter_ask_balance
+
+- rule: Ask interest rate
+  steps:
+  - intent: ask_interest_rate
+  - action: utter_ask_interest_rate
+
+- rule: Open account
+  steps:
+  - intent: open_account
+  - action: utter_open_account
+
+- rule: FAQ fallback
+  steps:
+  - intent: faq
+  - action: utter_faq

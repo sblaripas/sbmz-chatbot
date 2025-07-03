@@ -1,0 +1,38 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+
+- intent: ask_balance
+  examples: |
+    - How do I check my account balance?
+    - Can you tell me my balance?
+    - What is my balance?
+
+- intent: ask_interest_rate
+  examples: |
+    - What is the interest rate?
+    - Tell me about current interest rates.
+    - interest rate for savings account
+
+- intent: open_account
+  examples: |
+    - I want to open a new account.
+    - How can I open an account?
+    - Steps to open a bank account
+
+- intent: faq
+  examples: |
+    - I have a question about banking.
+    - Can you help me with a banking query?
+    - I need banking information.
