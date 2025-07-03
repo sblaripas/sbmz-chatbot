@@ -1,10 +1,9 @@
-FROM rasa/rasa:3.6.0-full
+FROM rasa/rasa-pro:3.12.20-full
 
 WORKDIR /app
 
 COPY . /app
 
-# Install custom actions requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
 USER 1001

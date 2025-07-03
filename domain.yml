@@ -1,26 +1,35 @@
 version: "3.1"
-intents:
-  - greet
-  - goodbye
-  - ask_balance
-  - ask_interest_rate
-  - open_account
-  - faq
+
+slots:
+  recipient:
+    type: text
+    mappings:
+      - type: from_llm
+  amount:
+    type: float
+    mappings:
+      - type: from_llm
 
 responses:
-  utter_greet:
-    - text: "Hello! How can I help you with your banking needs today?"
-  utter_goodbye:
-    - text: "Goodbye! Have a great day."
-  utter_ask_balance:
-    - text: "You can check your balance by logging into your online banking portal or via our mobile app."
-  utter_ask_interest_rate:
-    - text: "Our savings account interest rate is currently 3.5% per annum."
-  utter_open_account:
-    - text: "To open a new account, please visit our nearest branch or apply online on our website."
-  utter_faq:
-    - text: "Could you please specify your banking query?"
+  utter_ask_recipient:
+    - text: "Who would you like to send money to?"
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_ask_amount:
+    - text: "How much money would you like to send?"
+
+  utter_transfer_complete:
+    - text: "All done. {amount} has been sent to {recipient}."
+
+  utter_free_chitchat_response:
+    - text: "placeholder"
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          The following is a conversation with an AI assistant built with Rasa.
+          The assistant can help the user transfer money.
+          The assistant is helpful, creative, clever, and very friendly.
+          The user is making small talk, and the assistant should respond, keeping things light.
+          Context / previous conversation with the user:
+          {{history}}
+          {{current_input}}
+          Suggested AI Response:

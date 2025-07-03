@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   rasa:
-    build: .
+    # build: .
+    image: rasa/rasa:3.12.20
     ports:
       - "5005:5005"
     volumes:
@@ -15,7 +16,7 @@ services:
     environment:
       - RASA_ENV=qa
   actions:
-    image: rasa/rasa-sdk:3.6.0
+    image: rasa/rasa-sdk:3.12.1
     volumes:
       - ./actions:/app/actions
     ports:

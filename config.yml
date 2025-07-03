@@ -1,3 +1,17 @@
+recipe: default.v1
+language: en
+
+# pipeline:
+# - name: SingleStepLLMCommandGenerator
+#   llm:
+#     model_group: rasa_command_generation_model
+#   flow_retrieval:
+#     active: false
+
+# policies:
+#   - name: FlowPolicy
+# #  - name: EnterpriseSearchPolicy
+
 # Rasa NLU pipeline and policies for intent/entity recognition and dialogue management
 language: en
 pipeline:
